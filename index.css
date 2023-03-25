@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 98%);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 50px;
+    grid-template-areas:
+        "grid1 grid2 grid4"
+        "grid1 grid3 grid4";
+}
+
+.grid1 {
+    grid-area: grid1;
+    align-self: center;
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.grid4 {
+    grid-area: grid4;
+    align-self: center;
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.grid2 {
+    grid-area: grid2;
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.grid3 {
+    grid-area: grid3;
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.main-card {
+    display: inline-block;
+    width: 20rem;
+    margin-top: 1rem;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 68, 255, 0.777) 0px 8px 16px -8px;
+}
+
+img {
+    float: right;
+    margin-top: 2rem;
+}
+
+header {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-line1 {
+    font-size: 3rem;
+    font-weight: 200;
+    opacity: 0.7;
+}
+
+.header-line2 {
+    font-size: 3rem;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.header-line3 {
+    font-size: large;
+    font-weight: 400;
+    opacity: 0.5
+}
+h2{
+    opacity: 0.7;
+}
+h2~p{
+    opacity: 0.7;
+    font-weight: 400;
+    padding-top: 5px;
+}
+footer{
+    padding-top: 5rem;
+}
+
+@media only screen and (max-width: 600px)
+{
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem 1rem 2rem;
+
+    }
+    header {
+        padding: 3rem 2rem 0 2rem;
+    }
+    .header-line1 {
+        font-size: 1rem;
+    }
+    
+    .header-line2 {
+        font-size: 1rem;
+    }
+    
+    .header-line3 {
+        font-size: medium;
+    }
+}
